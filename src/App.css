@@ -30,8 +30,25 @@
 }
 
 .Form-Container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7.5rem;
+
     width: 100%;
     height: 20%;
+}
+
+.Form-Container svg{
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.Active{
+    color: gold;
 }
 
 .Step-Container{

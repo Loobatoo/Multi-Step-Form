@@ -2,7 +2,7 @@ import React from 'react'
 
 import './css/Button.css'
 
-const Button = ({id, Text, action}) => {
+const Button = ({id, Text, action, disabled}) => {
 
   const HandleAction = (e) => {
     e.preventDefault()
@@ -10,7 +10,7 @@ const Button = ({id, Text, action}) => {
   }
 
   return (
-    <button id={id} onClick={HandleAction}> {Text} </button>
+    <button id={id} onClick={HandleAction} disabled={disabled}> {Text} </button>
   )
 }
 
