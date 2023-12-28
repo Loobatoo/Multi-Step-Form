@@ -7,6 +7,9 @@ import './css/SecondStep.css'
 import Mood from './Mood';
 
 const SecondStep = () => {
+
+  
+
   return (
     <div className="Form">
       <div className="Catch-mood">
