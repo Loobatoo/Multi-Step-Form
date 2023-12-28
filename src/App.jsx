@@ -45,31 +45,36 @@ function App() {
     SetComment(e.target.value);
   }
 
+  let moodIcon;
 
-  const ComponentsForm = [
-  <FirstStep Act1={HandleName} Act2={HandleMail} name={Name} mail={Mail}/>, 
-  <SecondStep Act1={HandleMood} Act2={HandleComment} comment={Comment}/>, 
-  <ThirdStep/>
-  ]
-
-  const {ActualStep, ActualComponent, ChangeStep} = useForm(ComponentsForm)
-
-  {Mood === 'heart' && <FaGrinHearts />}
-  {Mood === 'grin' && <FaGrin />}
-  {Mood === 'meh' && <FaMeh />}
-  {Mood === 'frown' && <FaFrown />}
+  if (Mood === 'Frown') {
+    moodIcon = <FaFrown />;
+  } else if (Mood === 'Meh') {
+    moodIcon = <FaMeh />;
+  } else if (Mood === 'Grin') {
+    moodIcon = <FaGrin />;
+  } else if (Mood === 'heart') {
+    moodIcon = <FaGrinHearts />;
+  }
 
   console.log(Name)
   console.log(Mail)
   console.log(Mood)
   console.log(Comment)
 
+  const ComponentsForm = [
+  <FirstStep Act1={HandleName} Act2={HandleMail} name={Name} mail={Mail}/>, 
+  <SecondStep Act1={HandleMood} Act2={HandleComment} comment={Comment}/>, 
+  <ThirdStep Nome={Name} Icon={moodIcon} Comment={Comment}/>
+  ]
+  
+  const {ActualStep, ActualComponent, ChangeStep} = useForm(ComponentsForm)
+
   return (
     <>
       <div className="Header">
         <h1>Deixe sua avaliação</h1>
         <h2>Sua avaliação nos ajuda a melhorar nossos serviços.</h2>
-        {Mood}
       </div>
       <div className="Container">
         <div className="Form-Container">

@@ -1,0 +1,38 @@
+.Third-Step{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.Third-Container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 60%;
+}
+
+.Third-Container h1{
+    font-size: 30px;
+}
+
+.Third-Container h2{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.Third-Container h3{
+    font-size: 15px;
+}
+
+.Third-Container p{
+    font-size: 15px;
+    text-align: left;
+}
+
+.Third-Container span{
+    font-weight: bold;
+}
