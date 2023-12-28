@@ -1,0 +1,19 @@
+.Mood input:checked ~ p{
+    color: gold;
+}
+
+.Mood input:checked ~ svg{
+    fill: gold;
+}
+
+.Mood{
+    text-align: center;
+    position: relative;
+}
+
+.Mood input{
+    opacity: 0;
+    position: absolute;
+    top: 15px; 
+    left: 20px; 
+}

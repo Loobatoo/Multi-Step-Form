@@ -1,8 +1,11 @@
 import React from 'react'
 
+import { useState } from 'react'
+
 import './css/FirstStep.css'
 
-const FirstStep = () => {
+const FirstStep = ({Act1, Act2, name, mail}) => {
+
   return (
     <div className='Form'>
       <div className="Input-Label">
@@ -10,7 +13,9 @@ const FirstStep = () => {
           <input 
           type="text"
           placeholder='nome'
-          required />
+          required 
+          value={name}
+          onChange={Act1}/>
       </div>
 
       <div className="Input-Label">
@@ -18,7 +23,9 @@ const FirstStep = () => {
           <input 
           type="text"
           placeholder='e-mail'
-          required />
+          required 
+          value={mail}
+          onChange={Act2}/>
       </div>
 
     </div>

@@ -3,15 +3,14 @@ import './css/Mood.css'
 
 import { FaGrinHearts, FaGrin, FaMeh, FaFrown } from "react-icons/fa";
 
-const Mood = ({Icon, Text}) => {
-
-  const Active = "Active";
+const Mood = ({Icon, Text, name, Act}) => {
 
   return (
-    <div className="Mood">
+    <label className="Mood">
+      <input type="radio" name={name} onChange={Act} value={Icon}/>
         {Icon}
         <p>{Text}</p>
-    </div>
+    </label>
   )
 }
 
